@@ -1,0 +1,13 @@
+Code should effectively handle both scenarios of registering a new user and updating an existing user but unverified user account with a new password and verification code.
+
+IF existingUserByEmail EXISTS THEN 
+  IF existingUserByEmail.isVerified THEN
+    success : false,
+  ELSE
+    // Save the updated user
+  END IF     
+ELSE 
+  // Create a new user with the provided details 
+  // Save the new user
+END IF    
+     
